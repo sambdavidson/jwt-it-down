@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>JWT It Down</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="client.js"></script>
+<body>
+    <section class="header">
+            <h1>JWT It Down</h1>
+            <h3>Lets learn how jwts work!</h2>
+    </section>
+    <section class="newJWT">
+        <h3>New JWT</h3>
+        <div>Pick a username. Normally this would be a login but we won't worry about that.</div>
+        <form id="newJWTForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="username">
+            </div>
+            <div>Normally the stuff below would be decided by the server but you can modify it here.</div>
+            <div>
+                <label for="claims">Additional Claims:</label>
+                <input type="text" id="claims" name="claims" placeholder="comma separated claims" value="read,write" title="comma separated claims">
+            </div>
+            <div>
+                <label for="ttl">TTL:</label>
+                <input type="number" id="ttl" name="ttl" value="120" title="time to live in seconds">
+            </div>
+            <div>
+                <label for="hmac">HMAC:</label>
+                <input type="checkbox" id="hmac" name="hmac" checked title="generate hash-based message authentication code for JWT">
+            </div>
+            <div>
+                <label for="enc">ENC:</label>
+                <input type="checkbox" id="enc" name="enc" title="encrypt JWT">
+            </div>
+            <input type="submit" value="Login / Get New JWT">
+        </form>
+    </section>
+    <section class="jwt">
+        <h3>Your JWT</h3>
+        <h4>Base64</h4>
+        <pre id="jwtBase64"></pre>
+        <h4>JOSE Header</h4>
+        <pre id="jwtJoseHeader" contenteditable="true"></pre>
+        <h4>JWT Claims</h4>
+        <pre id="jwtClaims" contenteditable="true"></pre>
+        <input id="jwtSave" type="button" value="Save">
+    </section>
+    <section class="actions">
+            <h3>Actions</h3>
+            <div>
+                <label for="claimCheck">Check claim:</label>
+                <input type="text" id="claimCheck" placeholder="comma separated claims" value="read" title="comma separated claims">
+                <input type="button" value="Check Claim">
+                <span id="checkResult"></span>
+            </div>
+            <div>
+                <input type="button" value="Refresh JWT">
+            </div>
+        </section>
+    <section class="server">
+        <h3>Server Info</h3>
+        <div>Much of this is a secret and private to the server.</div>
+        <h4>Time</h4>
+        <pre id="time"></pre>
+        <h4>Key</h4>
+        <pre id="key"></div>
+    </section>
+</body>

@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+section {
+    overflow: auto;
+    border-bottom: black 1px solid;
+    padding-bottom: 10px;
+}
+pre {
+    font-family: 'Courier New', Courier, monospace;
+}
+label {
+    font-weight: bold;
+}
+.header {
+    text-align: center;
+    background: #fbb4ae;
+}
+
+.newJWT {
+    background: #b3cde3;
+}
+
+.jwt {background: #ccebc5;}
+.actions {background: #decbe4;}
+.server {background: #fed9a6;}
