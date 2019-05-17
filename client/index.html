@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <title>JWT It Down</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<script src="client.js"></script>
+<script src="client.js" type="module"></script>
 <body>
     <section class="header">
             <h1>JWT It Down</h1>
@@ -22,29 +22,36 @@
                 <input type="text" id="claims" name="claims" placeholder="comma separated claims" value="read,write" title="comma separated claims">
             </div>
             <div>
-                <label for="ttl">TTL:</label>
-                <input type="number" id="ttl" name="ttl" value="120" title="time to live in seconds">
+                    <label for="ttl">TTL:</label>
+                    <input type="number" id="ttl" name="ttl" value="120" title="time to live in seconds">
             </div>
-            <div>
-                <label for="hmac">HMAC:</label>
-                <input type="checkbox" id="hmac" name="hmac" checked title="generate hash-based message authentication code for JWT">
-            </div>
-            <div>
-                <label for="enc">ENC:</label>
-                <input type="checkbox" id="enc" name="enc" title="encrypt JWT">
+            <h4>Algorithm</h4>
+            <div class="subsection">
+                <div>
+                    <label for="none">None:</label>
+                    <input type="radio" value="none" name="alg" checked title="Generated JWT will be a JWS without an HMAC.">
+                </div>
+                <div>
+                    <label for="hs256">HMAC using SHA-256:</label>
+                    <input type="radio" value="hs256" name="alg" title="Generated JWT will be a JWS with an HMAC.">
+                </div>
+                <div>
+                    <label for="rsa1_5">RSAES-PKCS1-v1_5 and AES_128_CBC_HMAC_SHA_256:</label>
+                    <input type="radio" value="rsa1_5" name="alg" title="Generated JWT will be a JWE.">
+                </div>
             </div>
             <input type="submit" value="Login / Get New JWT">
         </form>
     </section>
     <section class="jwt">
         <h3>Your JWT</h3>
-        <h4>Base64</h4>
-        <pre id="jwtBase64"></pre>
         <h4>JOSE Header</h4>
         <pre id="jwtJoseHeader" contenteditable="true"></pre>
         <h4>JWT Claims</h4>
         <pre id="jwtClaims" contenteditable="true"></pre>
         <input id="jwtSave" type="button" value="Save">
+        <h4>Base64</h4>
+        <pre id="jwtBase64"></pre>
     </section>
     <section class="actions">
             <h3>Actions</h3>

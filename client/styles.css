@@ -24,3 +24,10 @@ label {
 .jwt {background: #ccebc5;}
 .actions {background: #decbe4;}
 .server {background: #fed9a6;}
+
+.subsection { 
+    padding-left: 10px;
+}
+.subsection label {
+    font-weight: normal;
+}

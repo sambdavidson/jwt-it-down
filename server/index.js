@@ -8,15 +8,13 @@ const port = 3000;
 
 const serverIssuer = "JWTItDown"
 
+console.log(__dirname);
+
 app.get('/', (req, res) => {
-    res.sendFile('index.html', {root: __dirname});
+    res.sendFile('client/index.html', {root: __dirname + '/../'});
 });
-app.get('/styles.css', (req, res) => {
-    res.sendFile('styles.css', {root: __dirname});
-});
-app.get('/client.js', (req, res) => {
-    res.sendFile('client.js', {root: __dirname});
-});
+app.use(express.static('client', {root: __dirname}));
+app.use(express.static('common', {root: __dirname}));
 
 app.get('/newJWT', (req, res) => {
     console.log(req.body);
@@ -31,6 +29,7 @@ app.get('/newJWT', (req, res) => {
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 function encodeJWTToBase64(JOSEHeader, claims) {
+    
 }
 
 function b64EncodeUnicode(str) {
