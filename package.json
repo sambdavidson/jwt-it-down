@@ -1,7 +1,7 @@
 {
   "name": "jwt-it-down",
   "version": "1.0.0",
-  "description": "samueldavidson@ learning to make jwt",
+  "description": "samueldavidson@ learning about JWTs, JWSs, and JWEs.",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
