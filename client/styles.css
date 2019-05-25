@@ -8,22 +8,14 @@ section {
 }
 pre {
     font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0,0,0,0.2)
 }
 label {
     font-weight: bold;
 }
 .header {
     text-align: center;
-    background: #fbb4ae;
 }
-
-.newJWT {
-    background: #b3cde3;
-}
-
-.jwt {background: #ccebc5;}
-.actions {background: #decbe4;}
-.server {background: #fed9a6;}
 
 .subsection { 
     padding-left: 10px;
@@ -31,3 +23,9 @@ label {
 .subsection label {
     font-weight: normal;
 }
+
+.section-1 {background: #fbb4ae;}
+.section-2 {background: #b3cde3;}
+.section-3 {background: #ccebc5;}
+.section-4 {background: #decbe4;}
+.section-5 {background: #fed9a6;}

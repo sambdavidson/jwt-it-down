@@ -13,10 +13,10 @@ console.log(__dirname);
 app.get('/', (req, res) => {
     res.sendFile('client/index.html', {root: __dirname + '/../'});
 });
-app.use(express.static('client', {root: __dirname}));
-app.use(express.static('common', {root: __dirname}));
+app.use('/client', express.static('client', {root: __dirname}));
+app.use('/common', express.static('common', {root: __dirname}));
 
-app.get('/newJWT', (req, res) => {
+app.get('/new_jws', (req, res) => {
     console.log(req.body);
     res.status(200);
     res.send({

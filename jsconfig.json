@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "/client/*": ["./client/*"],
+            "/common/*": ["./common/*"]
+        }
+    },
+    "include": ["client", "common", "server"]
+}
